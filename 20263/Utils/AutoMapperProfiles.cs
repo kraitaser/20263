@@ -17,6 +17,7 @@ namespace _20263.Utils
                 .ForMember(dest => dest.UserName, opt => opt.MapFrom(src => src.Email))
                 .ForMember(dest => dest.Email, opt => opt.MapFrom(src => src.Email))
                 .ForMember(dest => dest.DisplayName, opt => opt.MapFrom(src => src.Email));
+            CreateMap<Category, CategoryDTO>();
             CreateMap<Category, CategoryCreateDto>();
             CreateMap<CategoryCreateDto, Category>();
             CreateMap<CategoryUpdateDto, Category>();
