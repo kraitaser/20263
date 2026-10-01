@@ -22,7 +22,7 @@ namespace _20263.Context
                 e.Property(x => x.Id).ValueGeneratedOnAdd();
                 e.Property(x => x.Name).HasMaxLength(60);
                 e.Property(x => x.Description).HasMaxLength(250);
-                e.Property(x => x.CreatedAtUtc).HasDefaultValueSql("NOW()");
+                e.Property(x => x.CreatedAtUtc).HasDefaultValueSql("CURRENT_TIMESTAMP");
                 e.HasIndex(x => x.Name).IsUnique();
             });
         }

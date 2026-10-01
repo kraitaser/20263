@@ -22,7 +22,7 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddDefaultTokenProviders();
 
 //Conexion a la base de datos
-builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseNpgsql
+builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer
 (builder.Configuration.GetConnectionString("DefaultConnection")));
 
 //Configurar JsonWebTokens
